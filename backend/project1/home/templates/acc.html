@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4 {
+    font-size: 20px;
+    color:#222;
+}
+
+h6{
+    font-weight:700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px p;
+}
+
+.section-p1{
+    padding:40px 80px;
+}
+
+.section-m1{
+    margin:40px 0;
+}
+body{
+    width:100%;
+}
+
+
+/* Header start */
+#header{
+    display:flex;
+    align-items: centre;
+    justify-content: space-between;
+    padding : 20px 80px;
+    background: #44565c; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position:sticky;
+    top:0;
+    left:0;
+
+}
+
+#navbar{
+    display: flex;
+    align-items: centre;
+    justify-content: centre;
+}
+
+#navbar li{
+    list-style: none;
+    padding:0 20px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition : 0.5s ease;
+
+}
+
+#navbar li a:hover,
+#navbar li a.active
+{
+    color: #438b6c
+}
+.parent-container {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            
+            
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .switch-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .switch-btn:hover {
+            background-color: #2980b9;
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <section id="header">
+        <img src="https://th.bing.com/th/id/OIP.Sg1SIG3Z1YGX2-QBIcFJVwHaHa?w=189&h=189&c=7&r=0&o=5&pid=1.7"  width="30px" height="30px">
+
+        <div>
+            <ul id="navbar">
+                <li><a href="home">Home</a></li>
+                <li><a href="shop">shop</a></li>
+                <li><a href="about">about</a></li>
+                
+                <li><a class=active href="login">log-in / sign-up</a></li>
+                <li><a href="search.html"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="parent-container">
+        <div class="container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Username" name="username" required>
+                <br>
+                <input type="password" placeholder="Password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+       
+        <p>Don't have an account? <button class="switch-btn" onclick="switchForm()">Sign Up</button></p>
+    </div>
+    </div>
+    
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>
+                Get E-Mail updates about our latest shop and <span>special Offers</span>.
+            </p>
+
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your E-Mail address">
+            <button class="normal">Sign-Up</button>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div>
+            <p>&copy; 2023 Your Website. All rights reserved.</p><br>
+            <p>connect with us on:</p><br>
+            <p>insta: ar_showroom   ph:8444555488</p>
+            <p> Address: 51,abc street,xyz city, MCU state, DCU - 3000
+        </div>
+       
+    </footer>
+
+
+    <script>
+        function switchForm() {
+            document.getElementById("loginForm").reset();
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("signupForm").style.display = "block";
+        }
+    </script>
+
+
+
+
+  
+
+
+</body>
